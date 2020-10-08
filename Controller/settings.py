@@ -11,3 +11,9 @@ SSH_HOST_LIST = [
 # 生产环境使用密钥进行登录，这里测试环境使用用户名和密码
 SSH_USER = credentials.USER
 SSH_PASSWORD = credentials.PASSWORD
+
+PLUGINS = {
+    'disk': 'plugins.disk.DiskPlugin',
+    'memory': 'plugins.memory.MemoryPlugin',
+    'network': 'plugins.network.NetworkPlugin',
+}
