@@ -30,7 +30,11 @@ def run():
         # 可以使用get请求
         # response=requests.get('http://127.0.0.1:8000/api/get_data/', params={'host':host[0],'info':result})
         # 也可以使用post请求，但是要注意csrf
-        response = requests.post('http://127.0.0.1:8000/api/get_data/', data={'host': host[0], 'info': result})
+        # response = requests.post('http://127.0.0.1:8000/api/get_data/', data={'host': host[0], 'info': result})
+        # post请求中用data关键字传递字典，请求体中自动转换为&符号连接的格式。而如果post中不是用data传输，而是用json，
+        # 那么请求体中还是字典的格式，此时在Django后端是不能用request.POST来获取的，需要用request.body获取原始字典格式再处理
+        # 实际使用中用json传递比较常见，因为可以实现json格式的嵌套
+        response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
         print(response.text)
 
 
