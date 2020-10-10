@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- 
 # @author: xiaofu
 # @date: 2020-Oct-07
+from concurrent.futures.thread import ThreadPoolExecutor
 from importlib import import_module
 
 import paramiko
@@ -40,11 +41,18 @@ def paramiko_ssh(hostname, port, cmd):
 #         response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
 #         print(response.text)
 
+
+def task(host):
+    result = get_server_info(paramiko_ssh, host)
+    response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
+    print(result)
+
+
 def run():
+    pool = ThreadPoolExecutor(5)
     for host in settings.SSH_HOST_LIST:
-        result=get_server_info(paramiko_ssh, host)
-        response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
-        print(result)
+        pool.submit(task, host)
+
 
 if __name__ == '__main__':
     run()
