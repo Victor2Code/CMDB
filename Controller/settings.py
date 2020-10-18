@@ -17,3 +17,5 @@ PLUGINS = {
     'memory': 'plugins.memory.MemoryPlugin',
     'network': 'plugins.network.NetworkPlugin',
 }
+
+LOGGING_PATH = '../log/controller.log'  ## 日志文件目录在上一级

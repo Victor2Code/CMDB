@@ -1,0 +1,5 @@
+2020-10-18 11:51:44,413 - tools.log - ERROR - log - µÚ32ÐÐ - error
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\disk.py", line 15, in process
+    a=int('sss')
+ValueError: invalid literal for int() with base 10: 'sss'
