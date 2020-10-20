@@ -44,8 +44,10 @@ def paramiko_ssh(hostname, port, cmd):
 
 def task(host):
     result = get_server_info(paramiko_ssh, host)
-    response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
     print(result)
+    response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
+    print(response.text)
+
 
 
 def run():

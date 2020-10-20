@@ -3,3 +3,11 @@ Traceback (most recent call last):
   File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\disk.py", line 15, in process
     a=int('sss')
 ValueError: invalid literal for int() with base 10: 'sss'
+2020-10-20 17:58:13,020 - tools.log - ERROR - log - µÚ32ÐÐ - Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\disk.py", line 19, in process
+    result.data=int('sss')
+ValueError: invalid literal for int() with base 10: 'sss'
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\disk.py", line 19, in process
+    result.data=int('sss')
+ValueError: invalid literal for int() with base 10: 'sss'

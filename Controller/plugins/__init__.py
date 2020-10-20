@@ -15,5 +15,7 @@ def get_server_info(method, host):
         if hasattr(module, class_name):
             obj = getattr(module, class_name)()
             info = obj.process(method, host)
+            # print(key,info)
             server_info[key] = info
+    # print(server_info)
     return server_info

@@ -83,3 +83,25 @@ class BasePlugin:
 通过单例模式实现的全局日志模块，在`tools/log.py`中定义了自己的日志类`myLogger`，通过自定义文件存储目录和日志记录等级达到
 不同模块的日志分开存储的目的。
 目前只是调用了`fileHandler`实现日志的文件存储，后续还可以调用`httpHandler`等实现远程日志记录等功能。
+
+## 数据封装
+对于多次用到的相同结构的返回数据，例如Django中多个view函数，或者是这里多种资产数据的采集。
+```python
+class BaseResponse:
+    """
+    对资产的返回数据进行数据封装
+    """
+    def __init__(self, status=True, data=None, error=None):
+        self.status = status
+        self.data = data
+        self.error = error
+
+    @property
+    def dict(self):
+        return self.__dict__
+```
+
+## 资产采集
+物理机：需要自己跑命令
+虚拟机或者云端机器：直接调用API接口获取信息
+
