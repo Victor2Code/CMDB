@@ -104,4 +104,33 @@ class BaseResponse:
 ## 资产采集
 物理机：需要自己跑命令
 虚拟机或者云端机器：直接调用API接口获取信息
+下面是从物理机获取原始字符串的命令，具体的信息提取脚本在各个插件中`parse`方法中
+
+**cpu**
+```shell script
+cat /proc/cpuinfo
+```
+
+**主板**
+```shell script
+dmidecode -t 1
+```
+
+
+**内存**
+```shell script
+dmidecode -q -t 17 2>/dev/null
+```
+
+**网卡**
+```shell script
+ip addr show
+ip link show
+```
+
+**硬盘**
+```shell script
+MegaCli -PDList -aALL
+```
+
 

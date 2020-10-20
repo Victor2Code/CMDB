@@ -1,0 +1,120 @@
+DISK GROUP: 0
+Number of Spans: 1
+SPAN: 0
+Span Reference: 0x00
+Number of PDs: 2
+Number of VDs: 1
+Number of dedicated Hotspares: 0
+Virtual Drive Information:
+Virtual Drive: 0 (Target Id: 0)
+Name                :
+RAID Level          : Primary-1, Secondary-0, RAID Level Qualifier-0
+Size                : 54.947 GB
+Sector Size         : 512
+Mirror Data         : 54.947 GB
+State               : Optimal
+Strip Size          : 64 KB
+Number Of Drives    : 2
+Span Depth          : 1
+Default Cache Policy: WriteThrough, ReadAhead, Cached, No Write Cache if Bad BBU
+Current Cache Policy: WriteThrough, ReadAhead, Cached, No Write Cache if Bad BBU
+Default Access Policy: Read/Write
+Current Access Policy: Read/Write
+Disk Cache Policy   : Enabled
+Encryption Type     : None
+Bad Blocks Exist: No
+PI type: No PI
+
+Is VD Cached: No
+Physical Disk Information:
+Physical Disk: 0
+Enclosure Device ID: 252
+Slot Number: 0
+Drive's postion: DiskGroup: 0, Span: 0, Arm: 0
+Enclosure position: N/A
+Device Id: 5
+WWN: 5001517803d94502
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SATA
+
+Raw Size: 55.899 GB [0x6fccf30 Sectors]
+Non Coerced Size: 55.399 GB [0x6eccf30 Sectors]
+Coerced Size: 54.947 GB [0x6de5000 Sectors]
+Sector Size:  512
+Firmware state: Online, Spun Up
+Commissioned Spare : No
+Emergency Spare : No
+Device Firmware Level: 300i
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x4433221103000000
+Connected Port Number: 1(path0)
+Inquiry Data: CVMP302300A6060AGN  INTEL SSDSC2CT060A3                     300i
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None
+Device Speed: 6.0Gb/s
+Link Speed: 6.0Gb/s
+Media Type: Solid State Device
+Drive Temperature : N/A
+PI Eligibility:  No
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s
+Drive has flagged a S.M.A.R.T alert : No
+
+
+
+Physical Disk: 1
+Enclosure Device ID: 252
+Slot Number: 1
+Drive's postion: DiskGroup: 0, Span: 0, Arm: 1
+Enclosure position: N/A
+Device Id: 2
+WWN: 5001517803d855bb
+Sequence Number: 2
+Media Error Count: 0
+Other Error Count: 0
+Predictive Failure Count: 0
+Last Predictive Failure Event Seq Number: 0
+PD Type: SATA
+
+Raw Size: 55.899 GB [0x6fccf30 Sectors]
+Non Coerced Size: 55.399 GB [0x6eccf30 Sectors]
+Coerced Size: 54.947 GB [0x6de5000 Sectors]
+Sector Size:  512
+Firmware state: Online, Spun Up
+Commissioned Spare : No
+Emergency Spare : No
+Device Firmware Level: 300i
+Shield Counter: 0
+Successful diagnostics completion on :  N/A
+SAS Address(0): 0x4433221102000000
+Connected Port Number: 0(path0)
+Inquiry Data: CVMP3020013L060AGN  INTEL SSDSC2CT060A3                     300i
+FDE Capable: Not Capable
+FDE Enable: Disable
+Secured: Unsecured
+Locked: Unlocked
+Needs EKM Attention: No
+Foreign State: None
+Device Speed: 6.0Gb/s
+Link Speed: 6.0Gb/s
+Media Type: Solid State Device
+Drive Temperature : N/A
+PI Eligibility:  No
+Drive is formatted for PI information:  No
+PI: No PI
+Port-0 :
+Port status: Active
+Port's Linkspeed: 6.0Gb/s
+Drive has flagged a S.M.A.R.T alert : No
