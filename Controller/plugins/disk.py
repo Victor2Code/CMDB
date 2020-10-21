@@ -37,10 +37,10 @@ class DiskPlugin(BasePlugin):
         """
         result = {}
         key_map = {
-            'Slot Number': 'Slot',
-            'Raw Size': 'Capacity',
-            'Inquiry Data': 'Model',
-            'PD Type': 'PD_Type',
+            'Slot Number': 'slot',
+            'Raw Size': 'capacity',
+            'Inquiry Data': 'model',
+            'PD Type': 'pd_type',
         }
         for item in content.split('\n\n\n\n'):
             temp_dict = {}
@@ -60,5 +60,5 @@ class DiskPlugin(BasePlugin):
                     else:
                         temp_dict[key_map[key]]=value.strip()
             if temp_dict:
-                result[temp_dict['Slot']]=temp_dict
+                result[temp_dict[key_map['Slot Number']]]=temp_dict
         return result

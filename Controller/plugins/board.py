@@ -35,9 +35,9 @@ class BoardPlugin(BasePlugin):
         """
         result = {}
         key_map = {
-            'Manufacturer': 'Manufacturer',
-            'Product Name': 'Model',
-            'Serial Number': 'SN',
+            'Manufacturer': 'manufacturer',
+            'Product Name': 'model',
+            'Serial Number': 'sn',
         }
         for item in content.split('\n'):
             raw_data = item.strip().split(':')
