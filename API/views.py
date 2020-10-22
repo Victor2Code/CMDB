@@ -7,10 +7,12 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from API.models import Server, Disk
+from API.plugins import info_handler
 
 
 def test(request):
     return HttpResponse('测试成功')
+
 
 @csrf_exempt
 def get_data(request):
@@ -20,17 +22,17 @@ def get_data(request):
     content = request.body
     content_json = json.loads(content.decode('utf-8'))
     host = content_json['host']
-    info=content_json['info']
-    print(info.get('disk'))
-    # 获取服务器记录
-    server = Server.objects.get(host=host)
-    # 查看是否有对应硬盘数据
-    disks = Disk.objects.filter(server=server)
-    if disks.exists():
-        pass
-    else:
-        for key, value in info.get('disk').get('data').items():
-            disk = Disk(**value)
-            disk.server = server
-            disk.save()
-    return HttpResponse('数据获取成功')
+    info = content_json['info']
+    server_obj = Server.objects.get(host=host)
+    info_handler(server_obj, info)  # 插件的__init__中统一处理所有信息
+    # 查看是否有对应硬盘数据（改为可插拔插件）
+    # disks = Disk.objects.filter(server=server)
+    # if disks.exists():
+    #     pass
+    # else:
+    #     for key, value in info.get('disk').get('data').items():
+    #         disk = Disk(**value)
+    #         disk.server = server
+    #         disk.save()
+    ###
+    return HttpResponse('数据处理成功')

@@ -126,3 +126,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+API_HANDLER_PLUGINS = {
+    'disk': 'API.plugins.disk.DiskHandler',
+}

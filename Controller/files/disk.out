@@ -88,7 +88,7 @@ Predictive Failure Count: 0
 Last Predictive Failure Event Seq Number: 0
 PD Type: SATA
 
-Raw Size: 55.899 GB [0x6fccf30 Sectors]
+Raw Size: 52.899 GB [0x6fccf30 Sectors]
 Non Coerced Size: 55.399 GB [0x6eccf30 Sectors]
 Coerced Size: 54.947 GB [0x6de5000 Sectors]
 Sector Size:  512
