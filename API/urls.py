@@ -9,4 +9,5 @@ from API import views
 urlpatterns = [
     path('test/', views.test, name='test'),
     path('get_data/', views.get_data, name='get_data'),
+    path('get_server/', views.get_server, name='get_server'),
 ]

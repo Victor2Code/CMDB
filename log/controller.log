@@ -1,0 +1,96 @@
+2020-10-23 13:12:01,442 - tools.log - ERROR - log - 第32行 - Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\memory.py", line 19, in process
+    response = method(host[0], host[1], 'dmidecode -q -t 17 2>/dev/null')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\memory.py", line 19, in process
+    response = method(host[0], host[1], 'dmidecode -q -t 17 2>/dev/null')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2020-10-23 13:12:03,713 - tools.log - ERROR - log - 第32行 - Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\board.py", line 21, in process
+    response = method(host[0], host[1], 'dmidecode -t 1')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\board.py", line 21, in process
+    response = method(host[0], host[1], 'dmidecode -t 1')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2020-10-23 13:14:45,634 - tools.log - ERROR - log - 第32行 - Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\memory.py", line 19, in process
+    response = method(host[0], host[1], 'dmidecode -q -t 17 2>/dev/null')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\memory.py", line 19, in process
+    response = method(host[0], host[1], 'dmidecode -q -t 17 2>/dev/null')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2020-10-23 13:14:47,894 - tools.log - ERROR - log - 第32行 - Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\board.py", line 21, in process
+    response = method(host[0], host[1], 'dmidecode -t 1')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\CMDB\Controller\plugins\board.py", line 21, in process
+    response = method(host[0], host[1], 'dmidecode -t 1')
+  File "C:/Users/Admin/PycharmProjects/CMDB/Controller/app.py", line 19, in paramiko_ssh
+    ssh.connect(hostname, port, settings.SSH_USER, settings.SSH_PASSWORD)  # 生产环境使用key登录，这里测试环境使用统一密码
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "C:\Users\Admin\Anaconda3\lib\site-packages\paramiko\client.py", line 204, in _families_and_addresses
+    hostname, port, socket.AF_UNSPEC, socket.SOCK_STREAM
+  File "C:\Users\Admin\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed

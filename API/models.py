@@ -9,6 +9,8 @@ class Server(models.Model):
     服务器表
     """
     host = models.CharField(max_length=32, verbose_name='主机名')
+    port = models.IntegerField(default=57522, verbose_name='端口')
+    last_update = models.DateField(null=True, blank=True, verbose_name='上次更新')
 
     class Meta:
         db_table = 'Server'

@@ -1,6 +1,8 @@
+import datetime
 import json
 
-from django.http import HttpResponse
+from django.db.models import Q
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -25,6 +27,8 @@ def get_data(request):
     info = content_json['info']
     server_obj = Server.objects.get(host=host)
     info_handler(server_obj, info)  # 插件的__init__中统一处理所有信息
+    server_obj.last_update = datetime.date.today()
+    server_obj.save()
     # 查看是否有对应硬盘数据（改为可插拔插件）
     # disks = Disk.objects.filter(server=server)
     # if disks.exists():
@@ -36,3 +40,13 @@ def get_data(request):
     #         disk.save()
     ###
     return HttpResponse('数据处理成功')
+
+
+def get_server(request):
+    today = datetime.date.today()
+    servers = Server.objects.filter(Q(last_update__lt=today) | Q(last_update__isnull=True))
+    result = [(row.host,row.port) for row in servers]
+    data = {
+        'server_list': result
+    }
+    return JsonResponse(data=data)

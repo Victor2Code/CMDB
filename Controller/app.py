@@ -52,8 +52,10 @@ def task(host):
 
 def run():
     pool = ThreadPoolExecutor(5)
-    for host in settings.SSH_HOST_LIST:
-        pool.submit(task, host)
+    result = requests.get('http://127.0.0.1:8000/api/get_server/').json()
+    # for host in settings.SSH_HOST_LIST:
+    for server in result['server_list']:
+        pool.submit(task, server)
 
 
 if __name__ == '__main__':
