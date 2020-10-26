@@ -8,7 +8,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
-from API.models import Server, Disk
+from API.models import Server, Disk, DateTest
 from API.plugins import info_handler
 
 
@@ -45,8 +45,14 @@ def get_data(request):
 def get_server(request):
     today = datetime.date.today()
     servers = Server.objects.filter(Q(last_update__lt=today) | Q(last_update__isnull=True))
-    result = [(row.host,row.port) for row in servers]
+    result = [(row.host, row.port) for row in servers]
     data = {
         'server_list': result
     }
     return JsonResponse(data=data)
+
+
+def insert_date(request):
+    date_obj = DateTest(dt=datetime.datetime.now(), d=datetime.date.today())
+    date_obj.save()
+    return HttpResponse('数据插入成功')

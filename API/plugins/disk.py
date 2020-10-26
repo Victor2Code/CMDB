@@ -60,5 +60,5 @@ class DiskHandler(BaseHandler):
                     if temp:
                         record_list.append('【更新硬盘】槽位：{}，'.format(slot) + '；'.join(temp))
                         db_disk_info[slot].save()
-
-            Record.objects.create(content='\n'.join(record_list), server=server_obj)
+            if record_list:
+                Record.objects.create(content='\n'.join(record_list), server=server_obj)
