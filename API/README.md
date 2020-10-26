@@ -16,3 +16,7 @@
 历史记录，类似于电商中的订单，需要单独建表，与Server表是一对多的关系，外键连接。
 
 在上述入库处理过程的同时，通过字符串拼接的方式将资产的变更记录存入Record表。
+
+## Class Based View
+为了遵循Restful规范，通过CBV将get请求和post请求放到同一个url下。同时使用`method_decorator`将dispatch加上csrf豁免。
+> 注意，使用函数类型的视图函数也是可以达到目的的，只不过要使用if...else...结构进行判断

@@ -45,14 +45,14 @@ def paramiko_ssh(hostname, port, cmd):
 def task(host):
     result = get_server_info(paramiko_ssh, host)
     print(result)
-    response = requests.post('http://127.0.0.1:8000/api/get_data/', json={'host': host[0], 'info': result})
+    response = requests.post('http://127.0.0.1:8000/api/server/', json={'host': host[0], 'info': result})
     print(response.text)
 
 
 
 def run():
     pool = ThreadPoolExecutor(5)
-    result = requests.get('http://127.0.0.1:8000/api/get_server/').json()
+    result = requests.get('http://127.0.0.1:8000/api/server/').json()
     # for host in settings.SSH_HOST_LIST:
     for server in result['server_list']:
         pool.submit(task, server)
